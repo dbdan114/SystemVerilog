@@ -5,13 +5,13 @@ module _buf
   input wire Logic1,
   input tri inputData
 );
-  _pmos For0
+  pmos For0
   (
     outputData,
     Logic0,
     inputData
   );
-  _nmos For1
+  nmos For1
   (
     outputData,
     Logic1,
