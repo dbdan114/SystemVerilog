@@ -33,10 +33,11 @@ module _and
     end
   endgenerate
 
-  nmos ReturnValue
+  _buf ReturnValue
   (
     outputData,
-    Temp[INPUT_WIDTH],
-    Logic1
+    Logic0,
+    Logic1,
+    Temp[INPUT_WIDTH]
   );
 endmodule
