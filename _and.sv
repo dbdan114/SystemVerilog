@@ -20,7 +20,12 @@ module _and
   genvar Index;
   
   generate
-    for(Index=0; Index < INPUT_WIDTH; Index = Index + 1)
+    for
+    (
+      Index=0;
+      Index < INPUT_WIDTH;
+      Index = Index + 1
+    )
     begin:Place_and_B_to_A
       and_B_to_A Paste
       (
