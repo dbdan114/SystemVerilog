@@ -10,7 +10,7 @@ module _nand
 );
   tri  [INPUT_WIDTH:0] Temp;
   
-  nmos InitializeTo1
+  nmos InitializeTo0
   (
     Temp[0],
     Logic0,
