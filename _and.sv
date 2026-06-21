@@ -13,7 +13,7 @@ module _and
   nmos InitializeTo1
   (
     Temp[0],
-    Vdd,
+    Logic1,
     Logic1
   );
   
@@ -36,7 +36,7 @@ module _and
   nmos ReturnValue
   (
     outputData,
-    Vdd,
+    Logic1,
     Temp[INPUT_WIDTH]
   );
 endmodule
