@@ -20,7 +20,7 @@ module _nor
     for
     (
       Index=0;
-      Index < INPUT_WIDTH
+      Index < INPUT_WIDTH;
       Index = Index + 1
     )
     begin:Place_and_nB_to_A
