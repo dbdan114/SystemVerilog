@@ -33,7 +33,7 @@ module _or
     end
   endgenerate
 
-  nmos InitializeTo0
+  nmos ReturnValue
   (
     outputData,
     Temp[INPUT_WIDTH],
