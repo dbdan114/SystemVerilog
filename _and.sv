@@ -10,7 +10,13 @@ module _and
 );
   tri  [INPUT_WIDTH:0] Temp;
   
-  assign Temp[0]=Logic1;
+  nmos InitializeTo1
+  (
+    Temp[0],
+    Vdd,
+    Logic1
+  );
+  
   genvar Index;
   
   generate
@@ -26,6 +32,11 @@ module _and
       );
     end
   endgenerate
-  assign outputData=Temp[INPUT_WIDTH];
-    
+
+  nmos ReturnValue
+  (
+    outputData,
+    Vdd,
+    Temp[INPUT_WIDTH]
+  );
 endmodule
