@@ -20,7 +20,12 @@ module _nand
   genvar Index;
   
   generate
-    for(Index=0; Index < INPUT_WIDTH; Index = Index + 1)
+    for
+    (
+      Index=0;
+      Index < INPUT_WIDTH;
+      Index = Index + 1
+    )
     begin:Place_or_nB_to_A
       or_nB_to_A Paste
       (
