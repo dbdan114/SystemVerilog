@@ -6,13 +6,13 @@ module and_B_to_A
   input tri A,
   input tri B
 );
-  _pmos For0
+  pmos For0
   (
     outputData,
     Logic0,
     B
   );
-  _nmos For1
+  nmos For1
   (
     outputData,
     A,
