@@ -36,7 +36,7 @@ module _and
   nmos ReturnValue
   (
     outputData,
-    Logic1,
-    Temp[INPUT_WIDTH]
+    Temp[INPUT_WIDTH],
+    Logic1
   );
 endmodule
