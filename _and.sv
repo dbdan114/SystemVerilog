@@ -1,6 +1,6 @@
 module _and
 #(
-  parameter INPUT_WIDTH = 1
+  parameter int INPUT_WIDTH = 1
 )
 (
   output tri outputData,
