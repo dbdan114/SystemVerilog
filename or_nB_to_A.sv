@@ -6,13 +6,13 @@ module or_nB_to_A
   input tri A,
   input tri B
 );
-  _pmos For0
+  pmos For0
   (
     outputData,
     Logic1,
     B
   );
-  _nmos For1
+  nmos For1
   (
     outputData,
     A,
