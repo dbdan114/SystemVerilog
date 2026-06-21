@@ -13,7 +13,7 @@ module _nand
   nmos InitializeTo1
   (
     Temp[0],
-    Logic1,
+    Logic0,
     Logic1
   );
   
