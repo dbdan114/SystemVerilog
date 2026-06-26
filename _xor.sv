@@ -10,10 +10,10 @@ module _xor
 );
   tri  [INPUT_WIDTH:0] Temp;
   
-  nmos InitializeTo1
+  nmos InitializeTo0
   (
     Temp[0],
-    Logic,
+    Logic0,
     Logic1
   );
   
