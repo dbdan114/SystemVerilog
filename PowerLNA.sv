@@ -3,10 +3,10 @@
 module PowerLNA
 (
   output tri Receive,
-  input tri EnaleReceive,
+  input tri EnableReceive,
   input tri Transmit,
   input tri EnableTransmit,
-  input tri NoConnect
+  inout tri NoConnect
 );
 
   tri TempJunction;
