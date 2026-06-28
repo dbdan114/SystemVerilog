@@ -2,12 +2,12 @@
 
 module OpAmpDO
 (
-  input wire V_Plus,
-  input tri input_Plus,
+  inout wire V_Plus,
+  inout tri input_Plus,
   output tri output_Plus,
   output tri output_Minus,
-  input tri input_Minus,
-  input wire V_Minus
+  inout tri input_Minus,
+  inout wire V_Minus
 );
   DifferentialQBit FetchV_Plus(V_Plus,input_Plus);
   DifferentialQBit FetchV_Minus(input_Minus,V_Minus);
