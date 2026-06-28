@@ -9,10 +9,10 @@ module _xnor
   input tri [INPUT_WIDTH-1:0] inputData
 );
   tri  [INPUT_WIDTH:0] Temp;
-  nmos InitializeTo1
+  nmos InitializeToINPUT_WIDTH
   (
     Temp[0],
-    Logic1,
+    INPUT_WIDTH,
     Logic1
   );
   genvar Index;
