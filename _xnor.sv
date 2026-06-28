@@ -12,7 +12,7 @@ module _xnor
   nmos InitializeToINPUT_WIDTH
   (
     Temp[0],
-    ~(INPUT_WIDTH % 2),
+    !(INPUT_WIDTH % 2),
     Logic1
   );
   genvar Index;
