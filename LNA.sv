@@ -1,9 +1,9 @@
 module LNA
 (
   output tri Receive,
-  input tri EnableReceive,   // Approximately 2.1 V
+  input tri EnableReceive,   
   input tri Transmit,
-  input tri EnableTransmit, // Approximately 2.1 V
+  input tri EnableTransmit, 
   inout tri Antenna
 );
   tri TempTransmit;
