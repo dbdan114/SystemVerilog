@@ -10,7 +10,7 @@ module OpAmpSEO
 );
   DifferentialQBit FetchV_Plus(V_Plus,input_Plus);
   DifferentialQBit FetchV_Minus(input_Minus,V_Minus);
-  DifferentialQBit Fetchinput_Plus(output_Neutral,output_Plus);
+  DifferentialQBit Fetchinput_Plus(output_Neutral,input_Plus);
   DifferentialQBit Fetchinput_Minus(output_Neutral,input_Minus);
   
 endmodule
