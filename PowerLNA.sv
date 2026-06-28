@@ -2,17 +2,12 @@
 
 module PowerLNA
 (
-  output Receive,
-  input EnaleReceive,
-  input Transmit,
-  input EnableTransmit,
-  input RfAntenna
+  output tri Receive,
+  input tri EnaleReceive,
+  input tri Transmit,
+  input tri EnableTransmit,
+  input tri NoConnect
 );
-
-  tri Receive;
-  tri EnaleReceive;
-  tri Transmit;
-  tri EnableTransmit;
 
   tri TempJunction;
   
@@ -21,15 +16,16 @@ module PowerLNA
     TempJunction
   );
 
-  DifferentialQBit
+  DifferentialQBit ConnectNC
   (
-    RfAntenna,
+    NoConnect,
     TempJunction
+  );
   
   LNA CheckSignal
   (
     Receive, 
-    EnaleReceive, 
+    EnableReceive, 
     Transmit, 
     EnableTransmit, 
     TempJunction
