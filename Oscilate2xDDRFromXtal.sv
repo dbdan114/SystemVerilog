@@ -1,6 +1,6 @@
 `include "DigitSupply.vh"
 
-module Oscilate2XDDRFromXtal
+module Oscilate2xDDRFromXtal
 (
   input tri Xtal1,
   input tri Xtal2,
