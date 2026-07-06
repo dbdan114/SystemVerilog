@@ -5,19 +5,27 @@ module BufferOfCellOfSRAM
   input wire Logic0,
   input wire Logic1
 );
-  nmos SouthFrom0
-  
-  _buf NorthToSouth
+  pmos SouthFrom0OfNorth
   (
     South,
     Logic0,
+    North
+  );
+  nmos SouthFrom1OfNorth
+  (
+    South,
     Logic1,
     North
   );
-  _buf SouthToNorth
+  pmos NorthFrom0OfSouth
   (
     North,
     Logic0,
+    South
+  );
+  nmos NorthFrom1OfSouth
+  (
+    North,
     Logic1,
     South
   );
