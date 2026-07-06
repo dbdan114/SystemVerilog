@@ -43,19 +43,12 @@ module CellOfSRAM
     DataWest,
     Vss
   );
-  _buf NorthToSouth
-  (
-    DataSouth,
-    rVss,
-    rVdd,
-    DataNorth
-  );
-  _buf SouthToNorth
+  BufferOfCellOfSRAM Buffering
   (
     DataNorth,
+    DataSouth,
     rVss,
-    rVdd,
-    DataSouth
+    rVdd
   );
   pmos NorthToEast
   (
