@@ -2,12 +2,12 @@
 
 module OscilateFromXtalDDR
 (
-  inout Xtal1,
-  inout Xtal2,
-  output ClockP,
-  output ClockN,
-  inout Vplus,
-  inout Vminus
+  input tri Xtal1,
+  input tri Xtal2,
+  output tri ClockP,
+  output tri ClockN,
+  inout tri Vplus,
+  inout tri Vminus
 );
   tri North = Xtal1;
   tri South = Xtal2;
