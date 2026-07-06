@@ -2,9 +2,9 @@
 
 module PostLNA
 (
-  input tri OuterReceive,
+  inout tri OuterReceive,
   output tri InnerReceive,
-  input tri InnerTransmit,
+  inout tri InnerTransmit,
   output tri OuterTransmit
 );
 
