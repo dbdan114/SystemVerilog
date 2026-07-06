@@ -7,16 +7,16 @@ module BufferOfCellOfSRAM
 );
   _buf NorthToSouth
   (
-    DataSouth,
+    South,
     Logic0,
     Logic1,
-    DataNorth
+    North
   );
   _buf SouthToNorth
   (
-    DataNorth,
+    North,
     Logic0,
     Logic1,
-    DataSouth
+    South
   );
 endmodule
