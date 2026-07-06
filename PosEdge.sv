@@ -13,4 +13,13 @@ module PosEdge
     Clock,
     Vdd
   );
+  and_nB_to_A MakeEdge
+  (
+    Edge,
+    Logic0,
+    Logic1,
+    LatchedClock,
+    Clock
+  );
+  
 endmodule
