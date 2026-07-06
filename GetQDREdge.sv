@@ -1,8 +1,8 @@
 module GetQDREdge
 (
   output tri QDREdge,
-  input tri ClockP,
-  input tri ClockN
+  inout tri ClockP,
+  inout tri ClockN
 );
   DifferentialQBit ClockPtoEdge
   (
