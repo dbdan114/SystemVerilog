@@ -9,17 +9,17 @@ module PosEdge
   CellOfSRAM Latching
   (
     LatchedClock,
-    Vdd,
+    Logic1,
     Clock,
-    Vdd
+    Logic1
   );
   and_nB_to_A MakeEdge
   (
     Edge,
     Logic0,
     Logic1,
-    LatchedClock,
-    Clock
+    Clock,
+    LatchedClock
   );
   
 endmodule
