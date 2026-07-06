@@ -6,7 +6,7 @@ module PosEdge
   input tri Clock
 );
   tri LatchedClock;
-  tri Latched1WithLatchedClock;
+  tri Latched1WithClock;
   CellOfSRAM Latching
   (
     LatchedClock,
@@ -14,21 +14,20 @@ module PosEdge
     Clock,
     Logic1
   );
-  and_nB_to_A And1WithLatchedClock
+  and_B_to_A Latching1WithClock
   (
-    Latched1WithLatchedClock,
+    Latched1WithClock,
     Logic0,
     Logic1,
-    1,
-    LatchedClock
+    Logic1,
+    Clock
   );
-  and_B_to_A MakeEdge
+  and_nB_to_A MakeEdge
   (
     Edge,
     Logic0,
     Logic1,
-    Latched1WithLatchedClock,
-    Clock
+    Latched1WithClock,
+    LatchedClock
   );
-  
 endmodule
