@@ -10,8 +10,8 @@ module CellOfSRAM
 
   tri TempWest;
   tri DataWest;
-  tri DataNorth;
-  tri DataSouth;
+  inout tri DataNorth;
+  inout tri DataSouth;
   tri DataEast;
   tri TempEast;
 
