@@ -2,11 +2,11 @@
 
 module SplitRadio
 (
-  input tri V_Plus,
+  inout tri V_Plus,
   inout tri Receive,
   inout tri ReceivedRadio,
   inout tri ReceivedWire,
-  input tri V_Minus
+  inout tri V_Minus
 );
   tri Temp_Plus1;
   tri Temp_Plus2;
