@@ -18,22 +18,36 @@ module CellOfSRAM
     ReadEdge
   );
 
-  _not Getpre_nData
+  _not GetnData
   (
     nData,
-    rVss,
-    rVdd,
+    Vss,
+    Vdd,
     preData
   );
 
-  _buf Getpre_Data
+  _buf GetData
   (
     Data,
-    rVss,
-    rVdd,
+    Vss,
+    Vdd,
     preData
   );
 
-  assign 
-    
+  NegatingCellOfSRAM Negate
+  (
+    nData,
+    Data,
+    rVss,
+    rVdd
+  );
+
+  assign postData = (nData == 1'b0) && (Data == 1'b1) ? Vdd :
+                    (nData == 1'b1) && (Data == 1'b0) ? Vss : 1'bx;
+  nmos PutpostData
+  (
+    ReadData,
+    postData,
+    ReadEdge
+  );
 endmodule
