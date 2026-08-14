@@ -6,4 +6,10 @@ module CellOfSRAM
   input tri WriteData,
   input tri WriteEdge
 );
+  tri preData;
+  tri nData;
+  tri Data;
+  tri postData;
+
+  
 endmodule
