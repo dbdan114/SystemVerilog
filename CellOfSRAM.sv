@@ -7,8 +7,6 @@ module CellOfSRAM
   input tri WriteEdge
 );
   tri preData;
-  tri pre_nData;
-  tri pre_Data;
   tri nData;
   tri Data;
   tri postData;
@@ -22,6 +20,20 @@ module CellOfSRAM
 
   _not Getpre_nData
   (
-    pre_nData,
+    nData,
+    rVss,
+    rVdd,
+    preData
+  );
+
+  _buf Getpre_Data
+  (
+    Data,
+    rVss,
+    rVdd,
+    preData
+  );
+
+  assign 
     
 endmodule
