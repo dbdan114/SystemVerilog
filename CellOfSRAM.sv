@@ -14,8 +14,8 @@ module CellOfSRAM
   nmos GetpreData
   (
     preData,
-    ReadData,
-    ReadEdge
+    WriteData,
+    WriteEdge
   );
 
   _not GetnData
