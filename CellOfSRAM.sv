@@ -46,8 +46,8 @@ module CellOfSRAM
   (
     nData,
     Data,
-    rVss,
-    rVdd,
+    Vss,
+    Vdd,
     WriteEdge
   );
 
