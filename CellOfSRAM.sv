@@ -6,40 +6,49 @@ module CellOfSRAM
   input tri WriteData,
   input tri WriteEdge
 );
-  tri preData;
+  tri pre_nData;
+  tri pre_Data;
   tri nData;
   tri Data;
   tri postData;
 
-  nmos GetpreData
+  _not Getpre_nData
   (
-    preData,
-    WriteData,
+    pre_nData,
+    Vss,
+    Vdd,
+    ReadData
+  );
+
+  _buf Getpre_Data
+  (
+    pre_Data,
+    Vss,
+    Vdd,
+    ReadData
+  );
+
+  nmos GetnData
+  (
+    nData,
+    pre_nData,
     WriteEdge
   );
 
-  _not GetnData
-  (
-    nData,
-    Vss,
-    Vdd,
-    preData
-  );
-
-  _buf GetData
+  nmos GetData
   (
     Data,
-    Vss,
-    Vdd,
-    preData
+    pre_Data,
+    WriteEdge
   );
-
+  
   NegatingCellOfSRAM Negate
   (
     nData,
     Data,
     rVss,
-    rVdd
+    rVdd,
+    WriteEdge
   );
 
   assign postData = (nData == 1'b0) && (Data == 1'b1) ? Vdd :
