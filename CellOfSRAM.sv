@@ -17,7 +17,7 @@ module CellOfSRAM
     pre_nData,
     Vss,
     Vdd,
-    ReadData
+    WriteData
   );
 
   _buf Getpre_Data
@@ -25,7 +25,7 @@ module CellOfSRAM
     pre_Data,
     Vss,
     Vdd,
-    ReadData
+    WriteData
   );
 
   nmos GetnData
