@@ -21,5 +21,5 @@ module PosEdge
     Logic1
   );
   
-  assign Edge = ~LatchedClock ^ Clock;
+  assign Edge = ~LatchedClock & Clock;
 endmodule
