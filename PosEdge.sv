@@ -26,6 +26,6 @@ module PosEdge
     Edge,
     Logic0,
     Logic1,
-    {MakingEdge,Clock,LatchedClock}
+    {MakingEdge,Clock,LatchedClock,Clock}
   );
 endmodule
