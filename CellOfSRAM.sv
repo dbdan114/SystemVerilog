@@ -1,10 +1,11 @@
-`include "DigitSupply.vh"
 module CellOfSRAM
 (
   output tri ReadData,
   input tri ReadEdge,
   input tri WriteData,
-  input tri WriteEdge
+  input tri WriteEdge,
+  input wire Logic0,
+  input wire Logic1
 );
   tri pre_nData;
   tri pre_Data;
@@ -15,16 +16,16 @@ module CellOfSRAM
   _not Getpre_nData
   (
     pre_nData,
-    Vss,
-    Vdd,
+    Logic0,
+    Logic1,
     WriteData
   );
 
   _buf Getpre_Data
   (
     pre_Data,
-    Vss,
-    Vdd,
+    Logic0,
+    Logic1,
     WriteData
   );
 
@@ -46,13 +47,13 @@ module CellOfSRAM
   (
     nData,
     Data,
-    Vss,
-    Vdd,
+    Logic0,
+    Logic1,
     WriteEdge
   );
 
-  assign postData = (nData == 1'b0) && (Data == 1'b1) ? Vdd :
-                    (nData == 1'b1) && (Data == 1'b0) ? Vss : 1'bx;
+  assign postData = (nData == 1'b0) && (Data == 1'b1) ? Logic0 :
+                    (nData == 1'b1) && (Data == 1'b0) ? Logic1 : 1'bx;
   nmos PutpostData
   (
     ReadData,
