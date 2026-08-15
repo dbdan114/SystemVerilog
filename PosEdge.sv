@@ -1,7 +1,7 @@
 module PosEdge
 (
   input  tri Clock,
-  output tri ClockEdge,
+  output logic ClockEdge,
   input wire Logic0,
   input wire Logic1
 );
