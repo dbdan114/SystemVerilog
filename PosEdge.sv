@@ -17,10 +17,10 @@ module PosEdge
     Logic1
   );
 
-  initial 
+  /*initial 
   begin 
     ClockEdge= Logic0;
-  end
+  end*/
   
   always_ff @(posedge Clock)
   begin
