@@ -18,3 +18,4 @@ module PosEdge
       edge     <= signal & ~signal_d;
     end
   end
+endmodule
