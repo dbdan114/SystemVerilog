@@ -12,4 +12,12 @@ module PosEdge
       ClockEdge=Vdd;
     end
   end
+  always_ff @(~posedge Clock and Clock)
+  begin
+    if(Vdd)
+    begin
+      ClockEdge=Vss;
+    end
+  end
+  
 endmodule
