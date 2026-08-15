@@ -12,7 +12,7 @@ module PosEdge
       ClockEdge=Vdd;
     end
   end
-  always_ff @(~posedge Clock and Clock)
+  always_comb
   begin
     if(Vdd)
     begin
