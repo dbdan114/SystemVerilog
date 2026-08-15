@@ -2,7 +2,7 @@
 
 module PosEdge
 (
-  //output tri MakingEdge;
+  output tri MakingEdge;
   output tri Edge,
   input wire Logic0,
   input wire Logic1,
@@ -10,7 +10,6 @@ module PosEdge
 );
   tri LatchedClock;
   tri TempEdge;
-  tri MakingEdge;
   CellOfSRAM MakeLatch
   (
     LatchedClock,
@@ -21,5 +20,6 @@ module PosEdge
     Logic1
   );
   
-  assign Edge = ~LatchedClock & Clock;
+  assign Edge = LatchedClock ^ Clock;
+  assign MakingEdge = 
 endmodule
