@@ -8,6 +8,8 @@ module PosEdge
   input tri Clock
 );
   tri LatchedClock;
+  tri TempEdge;
+  tri MakingEdge;
   CellOfSRAM MakeLatch
   (
     LatchedClock,
@@ -18,6 +20,27 @@ module PosEdge
     Logic1
   );
 
-  assign Edge = (LatchedClock == 1'b0) && (Clock == 1'b1) ? Logic1 : Logic0;
-    
+  assign MakingEdge = rVss;
+
+  pmos GetTempEdge0
+  (
+    TempEdge,
+    Vdd,
+    LatchedClock
+  );
+
+  nmos GetTempEdge1
+  (
+    MakingEdge,
+    TempEdge,
+    LatchedClock
+  );
+
+  _buf ReturnEdge
+  (
+    Edge,
+    Logic0,
+    Logic1,
+    MakingEdge
+  );
 endmodule
