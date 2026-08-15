@@ -6,7 +6,7 @@ module PosEdge
   output tri ClockEdge
 );
   always_ff @(posedge Clock) begin
-    ClockEdge=Vdd;
+    assign ClockEdge=Vdd;
     
   end
 endmodule
