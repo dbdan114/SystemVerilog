@@ -21,7 +21,7 @@ module PosEdge
   );
 
   assign MakingEdge = (Clock==1'b1) && (LatchedClock==1'b0) ? Logic1 : Logic0;
-  _xor #(.INPUT_WIDTH(3)) MakeDiffer
+  _xor #(.INPUT_WIDTH(4)) MakeDiffer
   (
     Edge,
     Logic0,
