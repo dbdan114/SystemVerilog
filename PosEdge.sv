@@ -1,10 +1,24 @@
 module PosEdge
 (
-  input  tri Clock,
   output logic ClockEdge,
+  input  tri Clock,
   input wire Logic0,
   input wire Logic1
 );
+  tri LatchedClock;
+
+  CellOfSRAM MakeLatch
+  (
+    LatchedClock,
+    Logic1,
+    Clock,
+    Logic1,
+    Logic0,
+    Logic1
+  );
+
+  assign ClockEdge= Logic0;
+  
   always_ff @(posedge Clock)
   begin
     if(Logic1)
@@ -13,7 +27,7 @@ module PosEdge
     end
   end
 
-  always_ff @(Clock and not posedge Clock)
+  always_ff @(posedge LatchedClock)
   begin
     if(Logic1)
     begin
