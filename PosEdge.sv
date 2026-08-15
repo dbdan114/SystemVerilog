@@ -2,24 +2,19 @@
 
 module PosEdge
 (
-  output tri MakingEdge;
-  output tri Edge,
-  input wire Logic0,
-  input wire Logic1,
-  input tri Clock
+  input  logic clk,
+  input  logic rst_n,
+  input  logic signal,
+  output logic edge
 );
-  tri LatchedClock;
-  tri TempEdge;
-  CellOfSRAM MakeLatch
-  (
-    LatchedClock,
-    Logic1,
-    Clock,
-    Logic1,
-    Logic0,
-    Logic1
-  );
-  
-  assign Edge = LatchedClock ^ Clock;
-  assign MakingEdge = 
-endmodule
+  logic signal_d;
+
+  always_ff @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+      signal_d <= 1'b0;
+      edge     <= 1'b0;
+    end else begin
+      signal_d <= signal;
+      edge     <= signal & ~signal_d;
+    end
+  end
