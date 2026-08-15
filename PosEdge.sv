@@ -21,7 +21,7 @@ module PosEdge
     Logic1
   );
 
-  assign Edge = @(posedge net);
+  assign Edge = @(posedge Clock);
   /*_xor #(.INPUT_WIDTH(4)) MakeDiffer
   (
     Edge,
