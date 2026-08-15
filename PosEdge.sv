@@ -20,13 +20,6 @@ module PosEdge
     Logic0,
     Logic1
   );
-
-  assign Edge = @(posedge Clock);
-  /*_xor #(.INPUT_WIDTH(4)) MakeDiffer
-  (
-    Edge,
-    Logic0,
-    Logic1,
-    {MakingEdge,Clock,LatchedClock,Clock}
-  );*/
+  
+  assign Edge = ~LatchedClock ^ Clock;
 endmodule
