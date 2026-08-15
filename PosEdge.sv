@@ -1,23 +1,21 @@
-`include "DigitSupply.vh"
-
 module PosEdge
 (
   input  tri Clock,
-  output tri ClockEdge
+  output tri ClockEdge,
+  input wire Logic0,
+  input wire Logic1
 );
-  always_ff @(posedge Clock)
+  always_ff @(posedge Clock or Clock)
   begin
-    if(Vdd)
+    if(posedge Clock)
     begin
-      ClockEdge=Vdd;
+      ClockEdge=Logic1;
+    end
+    else
+    begin
+      ClockEdge=Logic0;
     end
   end
-  always_comb
-  begin
-    if(Vdd)
-    begin
-      ClockEdge=Vss;
-    end
-  end
+  
   
 endmodule
