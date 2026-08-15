@@ -2,6 +2,7 @@
 
 module PosEdge
 (
+  //output tri MakingEdge;
   output tri Edge,
   input wire Logic0,
   input wire Logic1,
@@ -20,7 +21,7 @@ module PosEdge
     Logic1
   );
 
-  assign Edge = ~LatchedClock&Clock;
+  assign Edge = @(posedge net);
   /*_xor #(.INPUT_WIDTH(4)) MakeDiffer
   (
     Edge,
