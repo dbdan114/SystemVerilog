@@ -16,7 +16,7 @@ module PosEdge
     Logic1,
     Logic0,
     Logic1
-  )
+  );
 
   assign Edge = (LatchedClock == 1'b0) && (Clock == 1'b1) ? Logic1 : Logic0;
     
