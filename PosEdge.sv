@@ -20,8 +20,6 @@ module PosEdge
     Logic1
   );
 
-  assign MakingEdge = rVss;
-
   pmos GetTempEdge0
   (
     TempEdge,
@@ -35,6 +33,8 @@ module PosEdge
     TempEdge,
     LatchedClock
   );
+
+  assign MakingEdge = rVss;
 
   _buf ReturnEdge
   (
