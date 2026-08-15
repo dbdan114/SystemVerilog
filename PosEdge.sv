@@ -13,7 +13,7 @@ module PosEdge
     end
   end
 
-  always_ff @(Clock)
+  always_ff @(Clock and not posedge Clock)
   begin
     if(Logic1)
     begin
