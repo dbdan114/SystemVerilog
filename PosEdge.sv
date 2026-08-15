@@ -5,7 +5,7 @@ module PosEdge
   input wire Logic0,
   input wire Logic1
 );
-  always_ff @(posedge Clock
+  always_ff @(posedge Clock)
   begin
     if(Logic1)
     begin
