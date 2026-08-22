@@ -2,7 +2,7 @@
 module PosEdge
 (
   output tri ClockEdge,
-  input  tri Clock,
+  input  tri Clock
 );
   tri Temp1;
   tri Temp2;
