@@ -52,8 +52,8 @@ module CellOfSRAM
     WriteEdge
   );
 
-  assign postData = (nData == 1'b0) && (Data == 1'b1) ? Logic0 :
-                    (nData == 1'b1) && (Data == 1'b0) ? Logic1 : 1'bx;
+  assign postData = (nData == 1'b0) && (Data == 1'b1) ? Logic1 :
+                    (nData == 1'b1) && (Data == 1'b0) ? Logic0 : 1'bx;
   nmos PutpostData
   (
     ReadData,
