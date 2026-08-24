@@ -1,9 +1,9 @@
-`include "DigitSupply.vh"
 module NegEdge
 (
   output tri ClockEdge,
   input  tri Clock
 );
+  `include "DigitSupply.vh"
   tri Temp1;
   tri Temp2;
 

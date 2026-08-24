@@ -1,10 +1,9 @@
-`include "DigitSupply.vh"
-
 module MakeVoltPN
 (
   output V_Plus,
   output V_Minus
 );
+  `include "DigitSupply.vh"
   DifferentialQBit LinkVddVss
   (
     rVdd,

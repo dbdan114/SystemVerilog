@@ -1,5 +1,3 @@
-`include "DigitSupply.vh"
-
 module OpAmpDO
 (
   inout wire V_Plus,
@@ -9,6 +7,7 @@ module OpAmpDO
   inout tri input_Minus,
   inout wire V_Minus
 );
+  `include "DigitSupply.vh"
   DifferentialQBit FetchV_Plus
   (
     V_Plus,
