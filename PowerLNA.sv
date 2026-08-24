@@ -1,5 +1,3 @@
-`include "DigitSupply.vh"
-
 module PowerLNA
 (
   output tri Receive,
@@ -7,7 +5,7 @@ module PowerLNA
   input tri Transmit,
   input tri EnableTransmit
 );
-
+  `include "DigitSupply.vh"
   tri TempJunction;
   tri NoConnect = Vss;
   

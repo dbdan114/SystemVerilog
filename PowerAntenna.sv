@@ -1,9 +1,8 @@
-`include "DigitSupply.vh"
-
 module PowerAntenna
 (
   inout Antenna
 );
+  `include "DigitSupply.vh"
   DifferentialQBit MakeSupplySignal0
   (
     Vdd, 
