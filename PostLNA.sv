@@ -1,5 +1,3 @@
-`include "DigitSupply.vh"
-
 module PostLNA
 (
   inout tri OuterReceive,
@@ -7,7 +5,7 @@ module PostLNA
   inout tri InnerTransmit,
   output tri OuterTransmit
 );
-
+  `include "DigitSupply.vh"
   tri TempVss;
   tri TempVdd;
   

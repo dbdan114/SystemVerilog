@@ -1,10 +1,8 @@
-`include "DigitSupply.vh"
-
 module DifferentialQBit(
     inout tri QBitN,
     inout tri QBitS
 );
-
+  `include "DigitSupply.vh"
   trireg DramNtoS;
   trireg DramStoN;
   pmos NtoS1
