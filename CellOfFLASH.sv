@@ -29,13 +29,13 @@ module CellOfFLASH
   (
     First1,
     WriteData,
-    Vdd
+    WriteEdge
   );
   nmos Fetch_WriteData_First0
   (
     First0,
     WriteData,
-    Vdd
+    WriteEdge
   );
 
   nmos Fetch_First1_Second1
@@ -63,4 +63,6 @@ module CellOfFLASH
     Vss,
     Vss
   );
+
+  
 endmodule
