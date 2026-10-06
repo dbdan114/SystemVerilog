@@ -12,6 +12,26 @@ module CellOfFLASH
   pmos Fetch_rVdd
   (
     First1,
+    rVdd,
+    Vss
   );
-  
+  pmos Fetch_rVss
+  (
+    First0,
+    rVss,
+    Vss
+  );
+
+  nmos Fetch_WriteData_First1
+  (
+    First1,
+    WriteData,
+    Vdd
+  );
+  nmos Fetch_WriteData_First0
+  (
+    First0,
+    WriteData,
+    Vdd
+  );
 endmodule
