@@ -11,6 +11,8 @@ module CellOfFLASH
 
   tri Second1;
   tri Second0;
+
+  tri nReadEdge;
   
   pmos Fetch_rVdd_First1
   (
@@ -64,5 +66,24 @@ module CellOfFLASH
     Vss
   );
 
-  
+  _not NegateReadEdge
+  (
+    nReadEdge,
+    Vss,
+    Vdd,
+    ReadEdge
+  );
+
+  pmos Fetch_Second0_ReadData
+  (
+    ReadData,
+    Second0,
+    nReadEdge
+  );
+  pmos Fetch_Second1_ReadData
+  (
+    ReadData,
+    Second1,
+    nReadEdge
+  );
 endmodule
