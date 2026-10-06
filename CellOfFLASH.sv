@@ -50,5 +50,17 @@ module CellOfFLASH
     First0,
     Vdd
   );
-  
+
+  pmos Fetch_Vdd_Second1
+  (
+    Second1,
+    Vdd,
+    Vss
+  );
+  pmos Fetch_Vss_Second0
+  (
+    Second0,
+    Vss,
+    Vss
+  );
 endmodule
