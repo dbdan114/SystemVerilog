@@ -9,6 +9,28 @@ module CellOfFLASH
   input wire Logic1
 );
 
+  tri postWriteData;
+  tri FlashData;
+  tri preReadData;
+
+  nmos Get_postWriteData
+  (
+    postWriteData,
+    WriteData,
+    WriteEdge
+  );
+
+  DifferentialQBit ConnectLogic1
+  (
+    Logic1,
+    FlashData
+  );
+
+  DifferentialQBit ConnectLogic0
+  (
+    FlashData,
+    Logic0
+  );
 endmodule
 
 /* module CellOfFLASH
