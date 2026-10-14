@@ -34,8 +34,8 @@ module CellOfFLASH
 
   DifferentialQBit Connect_postWriteData
   (
-    FlashData,
-    postWriteData
+    postWriteData,
+    FlashData
   );
   
 endmodule
