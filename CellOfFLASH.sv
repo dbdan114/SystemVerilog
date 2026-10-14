@@ -37,6 +37,12 @@ module CellOfFLASH
     FlashData,
     postWriteData
   );
+  
+  DifferentialQBit ConnectpreReadData
+  (
+    preReadData,
+    FlashData
+  );
 endmodule
 
 /* module CellOfFLASH
