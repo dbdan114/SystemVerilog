@@ -19,7 +19,7 @@ module CellOfDRAM
     inputData
   );
 
-  _nmos InsertWriting(DataToWrite, PreDataToWrite, WriteEdge);
+  nmos InsertWriting(DataToWrite, PreDataToWrite, WriteEdge);
 endmodule
 
 /*
