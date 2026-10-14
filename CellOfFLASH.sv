@@ -31,6 +31,13 @@ module CellOfFLASH
     FlashData,
     Logic0
   );
+
+  DifferentialQBit Connect_postWriteData
+  (
+    FlashData,
+    postWriteData
+  );
+  
 endmodule
 
 /* module CellOfFLASH
