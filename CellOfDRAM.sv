@@ -9,6 +9,7 @@ module CellOfDRAM
 );
 
   tri PreDataToWrite;
+  tri DataToWrite;
   
   _buf MakeInputToSupplyStrength
   (
@@ -17,6 +18,8 @@ module CellOfDRAM
     Vdd,
     inputData
   );
+
+  _nmos InsertWriting(DataToWrite, PreDataToWrite, WriteEdge);
 endmodule
 
 /*
