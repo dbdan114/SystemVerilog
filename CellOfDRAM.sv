@@ -8,6 +8,15 @@ module CellOfDRAM
   input tri RefreshEdge
 );
 
+  tri PreDataToWrite;
+  
+  _buf MakeInputToSupplyStrength
+  (
+    PreDataToWrite,
+    Vss,
+    Vdd,
+    inputData
+  );
 endmodule
 
 /*
