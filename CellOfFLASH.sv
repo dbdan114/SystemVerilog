@@ -44,7 +44,12 @@ module CellOfFLASH
     FlashData
   );
 
-  
+  nmos GetReadData
+  (
+    ReadData,
+    preReadData,
+    ReadEdge
+  );
 endmodule
 
 /* module CellOfFLASH
