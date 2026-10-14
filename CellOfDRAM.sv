@@ -47,7 +47,7 @@ module CellOfDRAM
   (
     DataToRefresh, 
     rVss,
-    rVdd
+    rVdd,
     LatchOfDRAM
   );
   
