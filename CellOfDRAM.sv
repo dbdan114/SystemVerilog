@@ -12,6 +12,7 @@ module CellOfDRAM
   tri DataToWrite;
   tri DataToRefresh;
   trireg LatchOfDRAM;
+  tri DataToRead;
   
   _buf MakeInputToSupplyStrength
   (
@@ -48,6 +49,12 @@ module CellOfDRAM
     rVss,
     rVdd
     LatchOfDRAM
+  );
+  
+  DifferentialQBit CorrectData
+  (
+    DataToRead,
+    DataToRefresh
   );
 endmodule
 
