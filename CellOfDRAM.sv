@@ -1,11 +1,11 @@
 `include "DigitSupply.vh"
 module CellOfDRAM
 (
-  output outputData,
-  input ReadEdge,
-  input inputData,
-  input WriteEdge,
-  input RefreshEdge
+  output tri outputData,
+  input tri ReadEdge,
+  input tri inputData,
+  input tri WriteEdge,
+  input tri RefreshEdge
 );
 
 endmodule
