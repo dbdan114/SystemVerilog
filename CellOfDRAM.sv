@@ -10,6 +10,8 @@ module CellOfDRAM
 
   tri PreDataToWrite;
   tri DataToWrite;
+  tri DataToRefresh;
+  trireg LatchOfDRAM;
   
   _buf MakeInputToSupplyStrength
   (
@@ -19,7 +21,34 @@ module CellOfDRAM
     inputData
   );
 
-  nmos InsertWriting(DataToWrite, PreDataToWrite, WriteEdge);
+  nmos InsertWriting
+  (
+    DataToWrite, 
+    PreDataToWrite, 
+    WriteEdge
+  );
+
+  nmos InsertRefreshing
+  (
+    DataToWrite, 
+    DataToRefresh, 
+    RefreshEdge
+  );
+
+  nmos SendToTriReg
+  (
+    LatchOfDRAM,
+    DataToWrite,
+    1'b1
+  );
+
+  _buf ToRefresh
+  (
+    DataToRefresh, 
+    rVss,
+    rVdd
+    LatchOfDRAM
+  );
 endmodule
 
 /*
