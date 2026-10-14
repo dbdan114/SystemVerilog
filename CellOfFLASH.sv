@@ -13,7 +13,7 @@ module CellOfFLASH
   tri FlashData;
   tri preReadData;
 
-  nmos Get_postWriteData
+  nmos GetpostWriteData
   (
     postWriteData,
     WriteData,
@@ -43,6 +43,8 @@ module CellOfFLASH
     preReadData,
     FlashData
   );
+
+  
 endmodule
 
 /* module CellOfFLASH
