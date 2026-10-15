@@ -1,5 +1,3 @@
-`include "DigitSupply.vh"
-
 module SplitRadio
 (
   inout tri V_Plus,
@@ -8,6 +6,7 @@ module SplitRadio
   inout tri ReceivedWire,
   inout tri V_Minus
 );
+  `include "DigitSupply.vh"
   tri Temp_Plus1;
   tri Temp_Plus2;
   tri Temp_Plus3;

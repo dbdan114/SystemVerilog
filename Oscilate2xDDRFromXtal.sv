@@ -1,5 +1,3 @@
-`include "DigitSupply.vh"
-
 module Oscilate2xDDRFromXtal
 (
   input tri Xtal1,
@@ -9,6 +7,7 @@ module Oscilate2xDDRFromXtal
   inout tri Vplus,
   inout tri Vminus
 );
+  `include "DigitSupply.vh"
   tri North = Xtal1;
   tri South = Xtal2;
   DifferentialQBit Rectify
