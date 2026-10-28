@@ -18,9 +18,7 @@ module PowerLNA
   tri NoConnect = Vss;
 
   tri TempReceive; 
-  tri TempEnableReceive;
   tri TempTransmit;
-  tri TempEnableTransmit;
   
   MakeVoltPN GetVoltPN
   (
@@ -51,11 +49,20 @@ module PowerLNA
   LNA CheckSignal
   (
     TempReceive, 
-    TempEnableReceive, 
+    EnableReceive, 
     TempTransmit, 
-    TempEnableTransmit, 
+    EnableTransmit, 
     TempJunction
-  );  
+  );
+  
+  PostLNA CorrectSignal
+  (
+    TempReceive,
+    Receive,
+    Transmit,
+    TempTransmit
+  );   
+    
 endmodule
 
 
