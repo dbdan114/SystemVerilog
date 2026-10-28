@@ -17,7 +17,6 @@ module PostLNA
     TempVss
   );
   DifferentialQBit FetchVss
-  
   (
     TempVss,
     OuterReceive
