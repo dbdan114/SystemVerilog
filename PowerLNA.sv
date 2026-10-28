@@ -1,5 +1,7 @@
 `include "DigitSupply.vh"
 
+
+/*
 module PowerLNA
 (
   output tri Receive,
@@ -32,3 +34,4 @@ module PowerLNA
   ); 
   
 endmodule  
+*/
