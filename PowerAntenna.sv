@@ -4,6 +4,45 @@ module PowerAntenna
 (
   inout Antenna
 );
+  tri Power;
+
+  pmos Gate_Vdd
+  (
+    Power,
+    Vdd,
+    Vss
+  );
+
+  DifferentialQBit Gate_rVss
+  (
+    Power,
+    rVss
+  );
+
+  DifferentialQBit Gate_rVdd
+  (
+    Power,
+    rVdd
+  );
+
+  DifferentialQBit Gate_Vss
+  (
+    Vss,
+    Power
+  );
+
+  DifferentialQBit DrainAntenna
+  (
+    Antenna,
+    Power
+  );
+endmodule
+
+/*
+module PowerAntenna
+(
+  inout Antenna
+);
   DifferentialQBit MakeSupplySignal0
   (
     Vdd, 
@@ -32,3 +71,4 @@ module PowerAntenna
     Vdd
   );
 endmodule
+*/
