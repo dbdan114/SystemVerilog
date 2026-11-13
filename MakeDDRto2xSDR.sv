@@ -1,6 +1,6 @@
 `include "DigitSupply.vh"
 
-module MakeDDRto2XSDR
+module MakeDDRto2xSDR
 (
   output tri Clock,
   input tri ClockP,
@@ -9,7 +9,7 @@ module MakeDDRto2XSDR
   input wire Logic1
 );
   tri EdgeQDR;
-  tri Weak2XSDR;
+  tri Weak2xSDR;
   GetQDREdge MakeEdgeQDR
   (
     EdgeQDR,
@@ -18,7 +18,7 @@ module MakeDDRto2XSDR
   );
   DifferentialQBit MakeWeak2xSDR
   (
-    Weak2XSDR,
+    Weak2xSDR,
     EdgeQDR
   );
   _buf MakeClock
@@ -26,6 +26,6 @@ module MakeDDRto2XSDR
     Clock,
     Logic0,
     Logic1,
-    Weak2XSDR
+    Weak2xSDR
   );
 endmodule
