@@ -1,6 +1,6 @@
 `include "DigitSupply.vh"
 
-module MakeMultipliedClock
+module MakeMultipliedSDR
 (
   output tri MultipliedClock,
   input tri HigherClock,
